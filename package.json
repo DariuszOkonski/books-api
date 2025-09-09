@@ -3,6 +3,9 @@
   "version": "y",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha --watch"
+  },
   "dependencies": {
     "chai": "4.2.0",
     "express": "^4.17.1",
