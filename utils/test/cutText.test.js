@@ -27,4 +27,9 @@ describe('CutText', () => {
     expect(cutText(TEXT, 0)).to.equal('Error');
     expect(cutText(TEXT, -6)).to.equal('Error');
   });
+
+  it('should return content without changes if proper args', () => {
+    expect(cutText(TEXT, 40)).to.equal(TEXT);
+    expect(cutText(TEXT, 11)).to.equal(TEXT);
+  });
 });
