@@ -32,4 +32,11 @@ describe('CutText', () => {
     expect(cutText(TEXT, 40)).to.equal(TEXT);
     expect(cutText(TEXT, 11)).to.equal(TEXT);
   });
+
+  it('should return good cut content if proper args', () => {
+    const mockText = 'Lorem Ipsum dolor sit amet';
+    expect(cutText(mockText, 14)).to.equal('Lorem Ipsum...');
+    expect(cutText(mockText, 5)).to.equal('Lorem...');
+    expect(cutText(mockText, 17)).to.equal('Lorem Ipsum dolor...');
+  });
 });
